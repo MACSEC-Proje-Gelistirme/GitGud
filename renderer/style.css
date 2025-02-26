@@ -1,25 +1,27 @@
-/* Genel Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body ve genel font ayarları */
+p{
+    font-size: 1.2em;
+    color: #333;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f6f9;
+    background-color: #323232;
     color: #333;
     line-height: 1.6;
     padding: 0 20px;
 }
 
-/* Başlıklar */
 h1, h2, h3 {
     color: #333;
 }
 
-/* Header */
 header {
     background-color: #282c34;
     padding: 15px 20px;
@@ -90,7 +92,7 @@ nav {
 }
 
 #cta-button:hover {
-    background-color: #61dafb;
+    background-color: darkblue;
 }
 
 /* Features Section */
@@ -112,8 +114,8 @@ nav {
 }
 
 .card {
-    background-color: #fff;
-    border: 2px solid #f0f0f0;
+    background-color: #3064bf;
+    border: 2px solid #3064bf;
     border-radius: 10px;
     padding: 20px;
     width: 30%;
@@ -136,7 +138,7 @@ nav {
 
 .card p {
     font-size: 1.1em;
-    color: #666;
+    color: #282c34;
 }
 
 /* Footer */
