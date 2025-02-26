@@ -58,7 +58,7 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
    ```bash
    npm start
    ```
-
+5. 🤩 clone the repository.
 ---
 
 ## Usage
@@ -104,6 +104,7 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
    ```bash
    git push origin feature/your-feature-name
    ```
+5. 🤩 clone the repository.
 
 ---
 
