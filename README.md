@@ -56,7 +56,7 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
 
 4. ▶️ Start the application:
    ```bash
-   npm start
+   npm run dev
    ```
 5. 🤩 clone the repository.
 ---
