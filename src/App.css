@@ -1,0 +1,152 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p{
+  font-size: 1.2em;
+  color: #333;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #323232;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+header {
+  background-color: #282c34;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8em;
+  color: #61dafb;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #61dafb;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #61dafb;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#cta-button {
+  background-color: #282c34;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#cta-button:hover {
+  background-color: darkblue;
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.features h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #3064bf;
+  border: 2px solid #3064bf;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  color: #61dafb;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.1em;
+  color: #282c34;
+}
+
+/* Footer */
+footer {
+  background-color: #282c34;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  border-radius: 8px;
+}

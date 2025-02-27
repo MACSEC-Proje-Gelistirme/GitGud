@@ -1,0 +1,8 @@
+{
+  "short_name": "GitGud",
+  "name": "GitGud(gui)",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
