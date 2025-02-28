@@ -58,8 +58,6 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
    ```bash
    npm run dev
    ```
-5. 🤩 clone the repository.
----
 
 ## Usage
 
@@ -104,8 +102,6 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
    ```bash
    git push origin feature/your-feature-name
    ```
-5. 🤩 clone the repository.
-
 ---
 
 ## License
@@ -116,7 +112,7 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
 
 ## Contact
 
-📧 For questions or support, please reach out to [huseynteymurrr74@gmail.com](mailto:huseynteymurrr74@gmail.com) or open an issue in this repository.
+📧 open an issue in this repository.
 
 ---
 
