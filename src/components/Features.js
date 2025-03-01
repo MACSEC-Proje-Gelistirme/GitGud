@@ -1,8 +1,9 @@
 import React from 'react';
-
+import {useTheme} from './ThemeContext';
 const Features = () => {
+  const { isLightMode } = useTheme();
   return (
-    <section className="features">
+    <section className={`features ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
       <h2>Features</h2>
       <div className="feature-cards">
         <div className="card">
