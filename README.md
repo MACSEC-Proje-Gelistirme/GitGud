@@ -13,7 +13,7 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
 - 📜 **History Viewer:** View commit history and diffs with an intuitive timeline.
 - 📦 **Stash Management:** Save and restore your work-in-progress.
 - ⚙️ **Conflict Resolution:** Visual tools to resolve merge conflicts.
-
+- 🌑 **Dark mode:** dark and light mode options.
 ---
 
 ## Tech Stack
@@ -21,32 +21,27 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
 ### Programming Languages:
 - 🟨 **JavaScript**: For frontend development, ensuring a responsive and interactive UI.
 - 🐍 **Python**: For backend scripting and managing Git commands.
-- 🟦 **TypeScript** *(optional)*: For enhanced type safety and scalability.
 
 ### Frameworks & Libraries:
 - 💻 **Electron**: For building cross-platform desktop applications.
 - ⚛️ **React**: For crafting a dynamic and reusable UI.
-- 🔄 **Redux** *(optional)*: For state management.
 - 🟢 **Node.js**: To run the backend server and manage dependencies.
 
 ### Tools:
 - 🗂️ **Git**: Core version control functionality.
-- 🌐 **GraphQL** *(optional)*: For efficient data querying (e.g., interacting with GitHub APIs).
 - 🛠️ **Webpack**: For bundling and optimizing assets.
-- 🐳 **Docker** *(optional)*: For containerized development and deployment.
-
 ---
 
 ## Installation
 
 1. 📥 Clone the repository:
    ```bash
-   git clone https://github.com/username/git-gui-tool.git
+   git clone https://github.com/username/GitGud.git
    ```
 
 2. 📂 Navigate to the project directory:
    ```bash
-   cd git-gui-tool
+   cd GitGud
    ```
 
 3. 📦 Install dependencies:
@@ -117,8 +112,6 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
 ---
 
 ### Future Enhancements
-
 - 🔗 Support for GitHub, GitLab, and Bitbucket integrations.
-- 🌑 Dark mode.
 - 📊 More advanced visualization for branch histories and logs.
 - 📱 Native mobile app compatibility.
