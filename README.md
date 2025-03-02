@@ -13,7 +13,7 @@ A user-friendly graphical interface for managing Git repositories. This tool sim
 - 📜 **History Viewer:** View commit history and diffs with an intuitive timeline.
 - 📦 **Stash Management:** Save and restore your work-in-progress.
 - ⚙️ **Conflict Resolution:** Visual tools to resolve merge conflicts.
-- 🌑 **Dark mode.** dark and light mode options.
+- 🌑 **Dark mode:** dark and light mode options.
 ---
 
 ## Tech Stack
