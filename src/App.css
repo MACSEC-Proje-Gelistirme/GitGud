@@ -108,7 +108,6 @@ nav {
   color: #61dafb;
   font-weight: 700;
   font-family: 'Comic Sans MS', cursive;
-  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
