@@ -18,8 +18,7 @@ const GitPush = () => {
 
   const handlePush = () => {
     if (!message || files.length === 0) {
-        setStatus('<span style="color: red;">❌ Please select files and enter a commit message.</span>');
-
+      setStatus('❌ Please select files and enter a commit message.');
       return;
     }
 

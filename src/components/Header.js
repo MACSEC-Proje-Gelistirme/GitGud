@@ -6,7 +6,7 @@ const Header = () => {
     <header>
       <nav>
         <div className="logo">GitGud(gui)</div>
-        <ul className="nav-linkzs">
+        <ul className="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="/repositories">Repositories</a></li>
           <li><a href="/settings">Settings</a></li>
