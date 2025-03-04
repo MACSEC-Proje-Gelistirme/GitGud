@@ -6,6 +6,7 @@ import Features from './components/Features';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Settings from './components/Settings';
 import { ThemeProvider } from './components/ThemeContext';
+import GitPush from './components/GitPush';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               </main>
             } />
             <Route path="/settings" element={<Settings />} />
+            <Route path="GitPush" element={<GitPush />} />
           </Routes>
         </div>
       </Router>

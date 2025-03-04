@@ -30,7 +30,7 @@ p:hover::before {
   transform: scaleX(1);
 }
 
-h1, h2, h3 {
+#mainText{
   color: #333;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -39,7 +39,7 @@ h1, h2, h3 {
   transition: all 0.4s ease-in-out;
 }
 
-h1::after, h2::after, h3::after {
+#mainText::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -52,26 +52,12 @@ h1::after, h2::after, h3::after {
   transition: transform 0.4s ease-in-out;
 }
 
-h1:hover::after, h2:hover::after, h3:hover::after {
+#mainText:hover::after {
   transform: scaleX(1);
 }
 
-h1 {
-  font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-h2 {
-  font-size: 2em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h3 {
-  font-size: 1.5em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h1:hover, h2:hover, h3:hover {
+#mainText:hover {
   color: #6a11cb;
   transform: translateY(-3px);
 }
