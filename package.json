@@ -23,7 +23,8 @@
     "electron-dev": "electron .",
     "electron-start": "wait-on http://localhost:3000 && electron .",
     "dev": "concurrently \"npm start\" \"npm run electron-start\"",
-    "dist": "electron-builder"
+    "dist": "electron-builder",
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +50,7 @@
     "electron": "^34.3.0",
     "electron-builder": "^25.1.8",
     "electron-is-dev": "^3.0.1",
+    "prettier": "^3.5.3",
     "wait-on": "^8.0.2"
   }
 }

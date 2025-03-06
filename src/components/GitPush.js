@@ -1,38 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 const GitPush = () => {
-  const [files, setFiles] = useState([]);
-  const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('');
+  const [files, setFiles] = useState([])
+  const [message, setMessage] = useState('')
+  const [status, setStatus] = useState('')
 
-  const fileInputRef = React.useRef(null);
+  const fileInputRef = React.useRef(null)
 
   const handleFileChange = (e) => {
-    setFiles(e.target.files);
-    setStatus('📂 Files selected!');
-  };
+    setFiles(e.target.files)
+    setStatus('📂 Files selected!')
+  }
 
   const handleCommitMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
+    setMessage(e.target.value)
+  }
 
   const handlePush = () => {
     if (!message || files.length === 0) {
-      setStatus('❌ Please select files and enter a commit message.');
-      return;
+      setStatus('❌ Please select files and enter a commit message.')
+      return
     }
 
-    setStatus('⏳ Pushing changes...');
+    setStatus('⏳ Pushing changes...')
 
     window.electronAPI.gitPush(message, files).then(
       (response) => {
-        setStatus(`✅ ${response}`);
+        setStatus(`✅ ${response}`)
       },
       (error) => {
-        setStatus(`❌ ${error}`);
-      }
-    );
-  };
+        setStatus(`❌ ${error}`)
+      },
+    )
+  }
 
   return (
     <div style={styles.container}>
@@ -73,8 +73,8 @@ const GitPush = () => {
 
       <p style={styles.status}>{status}</p>
     </div>
-  );
-};
+  )
+}
 
 const styles = {
   container: {
@@ -131,6 +131,6 @@ const styles = {
     fontSize: '16px',
     color: '#333',
   },
-};
+}
 
-export default GitPush;
+export default GitPush
