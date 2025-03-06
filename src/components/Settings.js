@@ -1,17 +1,19 @@
-import React from 'react';
-import './Settings.css';
-import { useTheme } from './ThemeContext';
+import React from 'react'
+import './Settings.css'
+import { useTheme } from './ThemeContext'
 
 function Settings() {
-  const { isLightMode, toggleMode, saveTheme } = useTheme();
+  const { isLightMode, toggleMode, saveTheme } = useTheme()
 
   const handleSaveChanges = () => {
-    saveTheme();
-    alert('Changes saved successfully!');
-  };
+    saveTheme()
+    alert('Changes saved successfully!')
+  }
 
   return (
-    <div className={`settings-page ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
+    <div
+      className={`settings-page ${isLightMode ? 'light-mode' : 'dark-mode'}`}
+    >
       <div className="settings-container">
         <h1>Settings</h1>
         <div className="settings-section">
@@ -38,7 +40,7 @@ function Settings() {
         </button>
       </div>
     </div>
-  );
+  )
 }
 
-export default Settings;
+export default Settings

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 const repositoriesData = [
   {
@@ -22,17 +22,19 @@ const repositoriesData = [
     language: 'HTML & CSS',
     stars: 95,
   },
-];
+]
 
 function Repositories() {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('')
 
   const filteredRepos = repositoriesData.filter((repo) =>
-    repo.name.toLowerCase().includes(search.toLowerCase())
-  );
+    repo.name.toLowerCase().includes(search.toLowerCase()),
+  )
 
   return (
-    <div style={{ padding: '20px', margin: '20px', backgroundColor: '#f0f0f0' }}>
+    <div
+      style={{ padding: '20px', margin: '20px', backgroundColor: '#f0f0f0' }}
+    >
       <div
         style={{
           maxWidth: '600px',
@@ -43,7 +45,9 @@ function Repositories() {
           boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
         }}
       >
-        <h1 style={{ textAlign: 'center', marginBottom: '20px', color: '#333' }}>
+        <h1
+          style={{ textAlign: 'center', marginBottom: '20px', color: '#333' }}
+        >
           Repositories
         </h1>
 
@@ -92,7 +96,7 @@ function Repositories() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Repositories;
+export default Repositories
