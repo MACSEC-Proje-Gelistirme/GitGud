@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron')
+const { app, BrowserWindow, ipcMain, dialog } = require('electron')
 const path = require('path')
 const { exec } = require('child_process')
 
@@ -11,10 +11,11 @@ function createWindow() {
     width: 1000,
     height: 800,
     webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
+      nodeIntegration: false,
+      contextIsolation: true,
       enableRemoteModule: true,
       sandbox: false,
+      preload: path.join(__dirname, './src/preload.js'),
     },
   })
 
@@ -69,6 +70,13 @@ ipcMain.handle('gitPush', (event, commitMessage, files) => {
       })
     })
   })
+})
+
+ipcMain.handle('dialog:openDirectory', async () => {
+  const result = await dialog.showOpenDialog(mainWindow, {
+    properties: ['openDirectory'],
+  })
+  return result.filePaths[0] // Seçilen klasörün yolu
 })
 
 process.on('uncaughtException', (error) => {

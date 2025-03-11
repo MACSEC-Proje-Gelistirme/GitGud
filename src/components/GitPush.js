@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 
 const GitPush = () => {
-  const [files, setFiles] = useState([])
+  const [folder, setFolder] = useState('No folder selected')
   const [message, setMessage] = useState('')
   const [status, setStatus] = useState('')
 
-  const fileInputRef = React.useRef(null)
-
-  const handleFileChange = (e) => {
-    setFiles(e.target.files)
-    setStatus('📂 Files selected!')
+  const handleFolderSelect = async () => {
+    const selectedFolder = await window.electron.dialog.openDirectory()
+    setFolder(selectedFolder || 'No folder selected')
   }
 
   const handleCommitMessageChange = (e) => {
@@ -17,14 +15,14 @@ const GitPush = () => {
   }
 
   const handlePush = () => {
-    if (!message || files.length === 0) {
+    if (!message || folder.length === 0) {
       setStatus('❌ Please select files and enter a commit message.')
       return
     }
 
     setStatus('⏳ Pushing changes...')
 
-    window.electronAPI.gitPush(message, files).then(
+    window.electronAPI.gitPush(message, folder).then(
       (response) => {
         setStatus(`✅ ${response}`)
       },
@@ -38,21 +36,16 @@ const GitPush = () => {
     <div style={styles.container}>
       <h1 style={styles.title}>✨ Git Push ✨</h1>
 
-      {/* Gizli Dosya Input */}
-      <input
-        type="file"
-        multiple
-        ref={fileInputRef}
-        onChange={handleFileChange}
-        style={{ display: 'none' }} // GİZLİYORUZ
-      />
-
       <button
-        onClick={() => fileInputRef.current.click()} // Özel buton ile tetikliyoruz
+        onClick={handleFolderSelect} // Özel buton ile tetikliyoruz
         style={styles.customFileButton}
       >
         📂 Select Files
       </button>
+
+      <text style={{ color: 'white', textAlign: 'center' }}>
+        <br /> 📁 Selected Folder <br /> {folder}
+      </text>
 
       <div style={styles.inputGroup}>
         <label style={styles.label}>
