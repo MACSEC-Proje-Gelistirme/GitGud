@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import Title from './ui/Title'
+import TextInput from './ui/TextInput'
+import Repo from './ui/Repo'
 
 const repositoriesData = [
   {
@@ -32,66 +35,25 @@ function Repositories() {
   )
 
   return (
-    <div
-      style={{ padding: '20px', margin: '20px', backgroundColor: '#f0f0f0' }}
-    >
-      <div
-        style={{
-          maxWidth: '600px',
-          margin: '0 auto',
-          backgroundColor: '#fff',
-          padding: '20px',
-          borderRadius: '8px',
-          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-        }}
-      >
-        <h1
-          style={{ textAlign: 'center', marginBottom: '20px', color: '#333' }}
-        >
-          Repositories
-        </h1>
-
-        <input
-          type="text"
+    <div className="p-5 m-5 bg-[#f0f0f0]">
+      <div className="max-w-[600px] m-auto bg-white p-5 rounded-lg shadow-md">
+        <Title text="Repositories" color="text-gray-700" />
+        <TextInput
+          color="bg-gray-200"
           placeholder="🔍 Search repositories..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          style={{
-            width: '100%',
-            padding: '8px',
-            marginBottom: '20px',
-            border: '1px solid #ccc',
-            borderRadius: '4px',
-          }}
         />
 
-        <div style={{ display: 'grid', gap: '10px' }}>
+        <div className="grid gap-3">
           {filteredRepos.map((repo) => (
-            <div
+            <Repo
               key={repo.id}
-              style={{
-                padding: '15px',
-                backgroundColor: '#f9f9f9',
-                border: '1px solid #ddd',
-                borderRadius: '5px',
-                transition: 'background-color 0.3s',
-              }}
-            >
-              <h2>{repo.name}</h2>
-              <p>{repo.description}</p>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  fontSize: '14px',
-                  color: '#666',
-                  marginTop: '5px',
-                }}
-              >
-                <span>🖋️ {repo.language}</span>
-                <span>⭐ {repo.stars}</span>
-              </div>
-            </div>
+              repo_name={repo.name}
+              repo_description={repo.description}
+              repo_language={repo.language}
+              repo_stars={repo.stars}
+            />
           ))}
         </div>
       </div>

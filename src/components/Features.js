@@ -1,32 +1,23 @@
 import React from 'react'
-import { useTheme } from './ThemeContext'
+import Card from './ui/Card'
+
 const Features = () => {
-  const { isLightMode } = useTheme()
   return (
-    <section className={`features ${isLightMode ? 'light-mode' : 'dark-mode'}`}>
+    <section className="text-center mt-12">
       <h2>Features</h2>
-      <div className="feature-cards">
-        <div className="card">
-          <h3>Easy Repository Management</h3>
-          <p>
-            Manage all your Git repositories in one place with a simple and
-            intuitive interface.
-          </p>
-        </div>
-        <div className="card">
-          <h3>Real-Time Updates</h3>
-          <p>
-            Get real-time updates on your repository status, branches, and
-            commits.
-          </p>
-        </div>
-        <div className="card">
-          <h3>Customizable Themes</h3>
-          <p>
-            Choose from a variety of themes to personalize your GitGud(gui)
-            experience.
-          </p>
-        </div>
+      <div className="flex flex-wrap justify-around gap-2">
+        <Card
+          h3_text="Easy Repository Management"
+          p_text="Manage all your Git repositories in one place with a simple and intuitive interface."
+        />
+        <Card
+          h3_text="Real-Time Updates"
+          p_text="Get real-time updates on your repository status, branches, and commits."
+        />
+        <Card
+          h3_text="Customizable Themes"
+          p_text="Choose from a variety of themes to personalize your GitGud(gui) experience."
+        />
       </div>
     </section>
   )
