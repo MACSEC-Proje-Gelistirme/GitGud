@@ -1,4 +1,11 @@
 import React, { useState } from 'react'
+import Button from './ui/Button'
+import Title from './ui/Title'
+import Container from './ui/Container'
+import Text from './ui/Text'
+import TextInput from './ui/TextInput'
+import Label from './ui/Label'
+import SubTitle from './ui/SubTitle'
 
 const GitPush = () => {
   const [folder, setFolder] = useState('No folder selected')
@@ -33,97 +40,35 @@ const GitPush = () => {
   }
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>✨ Git Push ✨</h1>
-
-      <button
-        onClick={handleFolderSelect} // Özel buton ile tetikliyoruz
-        style={styles.customFileButton}
-      >
-        📂 Select Files
-      </button>
-
-      <text style={{ color: 'white', textAlign: 'center' }}>
-        <br /> 📁 Selected Folder <br /> {folder}
-      </text>
-
-      <div style={styles.inputGroup}>
-        <label style={styles.label}>
-          📝 Commit Message:
-          <input
-            type="text"
+    <Container>
+      <Title text="✨ Git Push ✨" color="text-blue-300" />
+      <Button
+        onClick={handleFolderSelect}
+        text="Select Folder"
+        bgcolor="bg-blue-500"
+        tcolor="text-white"
+      />
+      <SubTitle color="text-white" text={`📁 Selected Folder`} />
+      <Text color="text-white" text={folder} />
+      <div className="mb-3">
+        <Label text="📝 Commit Message:" color="text-blue-300">
+          <TextInput
             placeholder="Enter your commit message..."
             value={message}
             onChange={handleCommitMessageChange}
-            style={styles.textInput}
+            color="border-gray-300"
           />
-        </label>
+        </Label>
       </div>
-
-      <button onClick={handlePush} style={styles.button}>
-        🚀 Push to Git
-      </button>
-
-      <p style={styles.status}>{status}</p>
-    </div>
+      <Button
+        onClick={handlePush}
+        text="🚀 Push to Git"
+        bgcolor="bg-green-500"
+        tcolor="text-white"
+      />
+      <Text text={status} color="text-gray-400" />
+    </Container>
   )
-}
-
-const styles = {
-  container: {
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-    maxWidth: '500px',
-    margin: '0 auto',
-    textAlign: 'center',
-  },
-  title: {
-    fontSize: '24px',
-    color: 'powderblue',
-    marginBottom: '20px',
-  },
-  customFileButton: {
-    backgroundColor: '#007bff',
-    color: '#fff',
-    padding: '8px 12px',
-    fontSize: '16px',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    marginBottom: '15px',
-  },
-  inputGroup: {
-    marginBottom: '15px',
-  },
-  label: {
-    display: 'block',
-    fontSize: '16px',
-    color: 'powderblue',
-    marginBottom: '5px',
-  },
-  textInput: {
-    width: '100%',
-    padding: '8px',
-    fontSize: '16px',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-    marginTop: '5px',
-  },
-  button: {
-    backgroundColor: '#28a745',
-    color: '#fff',
-    padding: '10px 20px',
-    fontSize: '16px',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    marginTop: '10px',
-  },
-  status: {
-    marginTop: '20px',
-    fontSize: '16px',
-    color: '#333',
-  },
 }
 
 export default GitPush
